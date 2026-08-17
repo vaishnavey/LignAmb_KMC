@@ -1,0 +1,349 @@
+log started: Mon Aug  3 16:17:58 2026
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the general Amber Force field.
+>>> #       This file is mostly for use with Antechamber
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "h1"  "H" "sp3" }
+>>> 	{ "h2"  "H" "sp3" }
+>>> 	{ "h3"  "H" "sp3" }
+>>> 	{ "h4"  "H" "sp3" }
+>>> 	{ "h5"  "H" "sp3" }
+>>> 	{ "ha"  "H" "sp3" }
+>>> 	{ "hc"  "H" "sp3" }
+>>> 	{ "hn"  "H" "sp3" }
+>>> 	{ "ho"  "H" "sp3" }
+>>> 	{ "hp"  "H" "sp3" }
+>>> 	{ "hs"  "H" "sp3" }
+>>> 	{ "hw"  "H" "sp3" }
+>>> 	{ "hx"  "H" "sp3" }
+>>> 	{ "o"  "O" "sp2" }
+>>> 	{ "o2"  "O" "sp2" }
+>>> 	{ "oh"  "O" "sp3" }
+>>> 	{ "op"  "O" "sp3" }
+>>> 	{ "oq"  "O" "sp3" }
+>>> 	{ "os"  "O" "sp3" }
+>>> 	{ "ow"  "O" "sp3" }
+>>> 	{ "c"  "C" "sp2" }
+>>> 	{ "c1"  "C" "sp2" }
+>>> 	{ "c2"  "C" "sp2" }
+>>> 	{ "c3"  "C" "sp3" }
+>>> 	{ "c5"  "C" "sp3" }
+>>> 	{ "c6"  "C" "sp3" }
+>>> 	{ "ca"  "C" "sp2" }
+>>> 	{ "cc"  "C" "sp2" }
+>>> 	{ "cd"  "C" "sp2" }
+>>> 	{ "ce"  "C" "sp2" }
+>>> 	{ "cf"  "C" "sp2" }
+>>> 	{ "cg"  "C" "sp2" }
+>>> 	{ "ch"  "C" "sp2" }
+>>> 	{ "cp"  "C" "sp2" }
+>>> 	{ "cs"  "C" "sp2" }
+>>> 	{ "cq"  "C" "sp2" }
+>>> 	{ "cu"  "C" "sp2" }
+>>> 	{ "cv"  "C" "sp2" }
+>>> 	{ "cx"  "C" "sp3" }
+>>> 	{ "cy"  "C" "sp3" }
+>>> 	{ "cz"  "C" "sp2" }
+>>> 	{ "n"   "N" "sp2" }
+>>> 	{ "n1"  "N" "sp2" }
+>>> 	{ "n2"  "N" "sp2" }
+>>> 	{ "n3"  "N" "sp3" }
+>>> 	{ "n4"  "N" "sp3" }
+>>> 	{ "n5"  "N" "sp3" }
+>>> 	{ "n6"  "N" "sp3" }
+>>> 	{ "n7"  "N" "sp3" }
+>>> 	{ "n8"  "N" "sp3" }
+>>> 	{ "n9"  "N" "sp3" }
+>>> 	{ "na"  "N" "sp2" }
+>>> 	{ "nb"  "N" "sp2" }
+>>> 	{ "nc"  "N" "sp2" }
+>>> 	{ "nd"  "N" "sp2" }
+>>> 	{ "ne"  "N" "sp2" }
+>>> 	{ "nf"  "N" "sp2" }
+>>> 	{ "nh"  "N" "sp2" }
+>>> 	{ "ni"  "N" "sp2" }
+>>> 	{ "nj"  "N" "sp2" }
+>>> 	{ "nk"  "N" "sp3" }
+>>> 	{ "nl"  "N" "sp3" }
+>>> 	{ "nm"  "N" "sp2" }
+>>> 	{ "nn"  "N" "sp2" }
+>>> 	{ "no"  "N" "sp2" }
+>>> 	{ "np"  "N" "sp3" }
+>>> 	{ "nq"  "N" "sp3" }
+>>> 	{ "ns"  "N" "sp2" }
+>>> 	{ "nt"  "N" "sp2" }
+>>> 	{ "nu"  "N" "sp2" }
+>>> 	{ "nv"  "N" "sp2" }
+>>> 	{ "nx"  "N" "sp3" }
+>>> 	{ "ny"  "N" "sp3" }
+>>> 	{ "nz"  "N" "sp3" }
+>>> 	{ "n+"  "N" "sp3" }
+>>> 	{ "s"   "S" "sp2" }
+>>> 	{ "s2"   "S" "sp2" }
+>>> 	{ "s3"   "S" "sp3" }
+>>> 	{ "s4"   "S" "sp3" }
+>>> 	{ "s6"   "S" "sp3" }
+>>> 	{ "sh"   "S" "sp3" }
+>>> 	{ "sp"   "S" "sp3" }
+>>> 	{ "sq"   "S" "sp3" }
+>>> 	{ "ss"   "S" "sp3" }
+>>> 	{ "sx"   "S" "sp3" }
+>>> 	{ "sy"   "S" "sp3" }
+>>> 	{ "p2"   "P" "sp2" }
+>>> 	{ "p3"   "P" "sp3" }
+>>> 	{ "p4"   "P" "sp3" }
+>>> 	{ "p5"   "P" "sp3" }
+>>> 	{ "pb"   "P" "sp3" }
+>>> 	{ "pc"   "P" "sp3" }
+>>> 	{ "pd"   "P" "sp3" }
+>>> 	{ "pe"   "P" "sp3" }
+>>> 	{ "pf"   "P" "sp3" }
+>>> 	{ "px"   "P" "sp3" }
+>>> 	{ "py"   "P" "sp3" }
+>>> 	{ "f"   "F" "sp3" }
+>>> 	{ "cl"  "Cl" "sp3" }
+>>> 	{ "br"  "Br" "sp3" }
+>>> 	{ "i"   "I"  "sp3" }
+>>> }
+>>> #
+>>> #	Load the general force field parameter set.
+>>> #
+>>> gaff = loadamberparams gaff2.dat
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)
+(UNKNOWN ATOM TYPE: hb)
+>> 
+>> # Load parameters not explicitly found in gaff2
+>> # but required by LignAmb25
+>> lnAMbp = loadamberparams LignAmb25_HF.dat
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/LignAmb25_HF.dat
+Reading title:
+LignAmb25 force field for lignin polymers (Version 1.0.0 September 2025)
+>> #
+>> # Load LignAmb25 residue library
+>> #
+>> lnAMbl = loadoff LignAmb25_HF.lib
+Loading library: /data/srinivab/lignin_construction/ambertools26/dat/leap/lib/LignAmb25_HF.lib
+Loading: 1C1
+Loading: 1D1
+Loading: 1G1
+Loading: 1G4
+Loading: 1H1
+Loading: 1H4
+Loading: 1S1
+Loading: 1S4
+Loading: 1T4
+Loading: 1TL
+Loading: 1TM
+Loading: 1g1
+Loading: 2C2
+Loading: 2C4
+Loading: 2C5
+Loading: 2CF
+Loading: 2D3
+Loading: 2G2
+Loading: 2G4
+Loading: 2G5
+Loading: 2GF
+Loading: 2Gf
+Loading: 2H2
+Loading: 2H4
+Loading: 2H5
+Loading: 2HF
+Loading: 2S2
+Loading: 2S4
+Loading: 2TL
+Loading: 2TM
+Loading: 2TN
+Loading: 2g2
+Loading: 2g4
+Loading: 3CK
+Loading: 3CV
+Loading: 3CX
+Loading: 3Cx
+Loading: 3DJ
+Loading: 3GK
+Loading: 3GV
+Loading: 3Gx
+Loading: 3HK
+Loading: 3HV
+Loading: 3Ho
+Loading: 3Hq
+Loading: 3Hx
+Loading: 3Sx
+Loading: 3TN
+Loading: 3gJ
+Loading: 3gx
+Loading: 4Cw
+Loading: 4Gy
+Loading: 4Gz
+Loading: 4Hr
+Loading: 4Hs
+Loading: 4Ht
+Loading: 4Hu
+Loading: 4Hy
+Loading: 4Hz
+Loading: 4gw
+Loading: 5Cl
+Loading: 5Cm
+Loading: 5Hi
+Loading: 5Hj
+Loading: 5Hk
+Loading: A4E
+Loading: A4T
+Loading: A4e
+Loading: A4t
+Loading: ABE
+Loading: ABT
+Loading: ABe
+Loading: ABt
+Loading: AZE
+Loading: AZT
+Loading: AZe
+Loading: AZt
+Loading: AcC
+Loading: AcT
+Loading: AgT
+Loading: ApT
+Loading: B1E
+Loading: B1T
+Loading: B1e
+Loading: B1t
+Loading: B4E
+Loading: B4T
+Loading: B4e
+Loading: B4t
+Loading: B5E
+Loading: B5T
+Loading: B5e
+Loading: B5t
+Loading: BAR
+Loading: BAS
+Loading: BB0
+Loading: BB1
+Loading: BB2
+Loading: BB3
+Loading: BB4
+Loading: BB5
+Loading: BB6
+Loading: BB7
+Loading: BB8
+Loading: BB9
+Loading: BBA
+Loading: BBB
+Loading: BBC
+Loading: BBD
+Loading: BBE
+Loading: BBF
+Loading: BDE
+Loading: BDT
+Loading: BDe
+Loading: BDt
+Loading: CAT
+Loading: COT
+Loading: CXX
+Loading: CaT
+Loading: CoT
+Loading: Csp
+Loading: DBE
+Loading: DBT
+Loading: DBe
+Loading: DBt
+Loading: DhT
+Loading: Fer
+Loading: GCE
+Loading: GCT
+Loading: GCe
+Loading: GCt
+Loading: GXX
+Loading: GZE
+Loading: GZT
+Loading: GZe
+Loading: GZt
+Loading: Gsp
+Loading: HXX
+Loading: Hsp
+Loading: MoT
+Loading: PrT
+Loading: STI
+Loading: SXX
+Loading: Ssp
+Loading: XCE
+Loading: XCT
+Loading: XCe
+Loading: XCt
+Loading: cDF
+Loading: dAR
+Loading: dAS
+Loading: lDF
+Loading: tlT
+>> #
+>> #
+>> # Load LignAmb25 residue library
+>> #
+>> lnAMBc = loadamberparams LignAmb25_HF-GLYCAM.frcmod
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/LignAmb25_HF-GLYCAM.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Combined Lignin-Carbohydrate Cross-linkage Parameters (LignAmb25/GLYCAM)
+>> #
+> 
+> 
+> ## C5C5 lignin chain for G/S/H = 2.02:0.19:0.38
+> t1 = copy tlT
+> set t1 tail t1.1.CAD
+> t2 = copy 2GF
+> set t2 head t2.1.C1
+> set t2 tail t2.1.C5M
+> test_most_possible_dimer_02_c5c5 = sequence { t1 t2 }
+Sequence: tlT
+Sequence: 2GF
+> t3 = copy 2GF
+> set t3 head t3.1.C5M
+> set t3 tail t3.1.C1
+> test_most_possible_dimer_02_c5c5 = sequence { test_most_possible_dimer_02_c5c5 t3 }
+Sequence: tlT
+Sequence: 2GF
+> t4 = copy tlT
+> set t4 head t4.1.CAD
+> test_most_possible_dimer_02_c5c5 = sequence { test_most_possible_dimer_02_c5c5 t4 }
+Sequence: tlT
+Sequence: tlT
+> 
+> charge test_most_possible_dimer_02_c5c5
+Total unperturbed charge:   0.000004
+Total perturbed charge:     0.000004
+> saveamberparm test_most_possible_dimer_02_c5c5 test_most_possible_dimer_02_c5c5.parm7 test_most_possible_dimer_02_c5c5.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 16 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	2GF	2
+	tlT	2
+  )
+ (no restraints)
+> savepdb test_most_possible_dimer_02_c5c5 test_most_possible_dimer_02_c5c5.pdb
+Writing pdb file: test_most_possible_dimer_02_c5c5.pdb
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

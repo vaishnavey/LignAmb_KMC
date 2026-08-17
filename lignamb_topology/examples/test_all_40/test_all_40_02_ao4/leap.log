@@ -1,0 +1,797 @@
+log started: Mon Aug  3 16:31:18 2026
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the general Amber Force field.
+>>> #       This file is mostly for use with Antechamber
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "h1"  "H" "sp3" }
+>>> 	{ "h2"  "H" "sp3" }
+>>> 	{ "h3"  "H" "sp3" }
+>>> 	{ "h4"  "H" "sp3" }
+>>> 	{ "h5"  "H" "sp3" }
+>>> 	{ "ha"  "H" "sp3" }
+>>> 	{ "hc"  "H" "sp3" }
+>>> 	{ "hn"  "H" "sp3" }
+>>> 	{ "ho"  "H" "sp3" }
+>>> 	{ "hp"  "H" "sp3" }
+>>> 	{ "hs"  "H" "sp3" }
+>>> 	{ "hw"  "H" "sp3" }
+>>> 	{ "hx"  "H" "sp3" }
+>>> 	{ "o"  "O" "sp2" }
+>>> 	{ "o2"  "O" "sp2" }
+>>> 	{ "oh"  "O" "sp3" }
+>>> 	{ "op"  "O" "sp3" }
+>>> 	{ "oq"  "O" "sp3" }
+>>> 	{ "os"  "O" "sp3" }
+>>> 	{ "ow"  "O" "sp3" }
+>>> 	{ "c"  "C" "sp2" }
+>>> 	{ "c1"  "C" "sp2" }
+>>> 	{ "c2"  "C" "sp2" }
+>>> 	{ "c3"  "C" "sp3" }
+>>> 	{ "c5"  "C" "sp3" }
+>>> 	{ "c6"  "C" "sp3" }
+>>> 	{ "ca"  "C" "sp2" }
+>>> 	{ "cc"  "C" "sp2" }
+>>> 	{ "cd"  "C" "sp2" }
+>>> 	{ "ce"  "C" "sp2" }
+>>> 	{ "cf"  "C" "sp2" }
+>>> 	{ "cg"  "C" "sp2" }
+>>> 	{ "ch"  "C" "sp2" }
+>>> 	{ "cp"  "C" "sp2" }
+>>> 	{ "cs"  "C" "sp2" }
+>>> 	{ "cq"  "C" "sp2" }
+>>> 	{ "cu"  "C" "sp2" }
+>>> 	{ "cv"  "C" "sp2" }
+>>> 	{ "cx"  "C" "sp3" }
+>>> 	{ "cy"  "C" "sp3" }
+>>> 	{ "cz"  "C" "sp2" }
+>>> 	{ "n"   "N" "sp2" }
+>>> 	{ "n1"  "N" "sp2" }
+>>> 	{ "n2"  "N" "sp2" }
+>>> 	{ "n3"  "N" "sp3" }
+>>> 	{ "n4"  "N" "sp3" }
+>>> 	{ "n5"  "N" "sp3" }
+>>> 	{ "n6"  "N" "sp3" }
+>>> 	{ "n7"  "N" "sp3" }
+>>> 	{ "n8"  "N" "sp3" }
+>>> 	{ "n9"  "N" "sp3" }
+>>> 	{ "na"  "N" "sp2" }
+>>> 	{ "nb"  "N" "sp2" }
+>>> 	{ "nc"  "N" "sp2" }
+>>> 	{ "nd"  "N" "sp2" }
+>>> 	{ "ne"  "N" "sp2" }
+>>> 	{ "nf"  "N" "sp2" }
+>>> 	{ "nh"  "N" "sp2" }
+>>> 	{ "ni"  "N" "sp2" }
+>>> 	{ "nj"  "N" "sp2" }
+>>> 	{ "nk"  "N" "sp3" }
+>>> 	{ "nl"  "N" "sp3" }
+>>> 	{ "nm"  "N" "sp2" }
+>>> 	{ "nn"  "N" "sp2" }
+>>> 	{ "no"  "N" "sp2" }
+>>> 	{ "np"  "N" "sp3" }
+>>> 	{ "nq"  "N" "sp3" }
+>>> 	{ "ns"  "N" "sp2" }
+>>> 	{ "nt"  "N" "sp2" }
+>>> 	{ "nu"  "N" "sp2" }
+>>> 	{ "nv"  "N" "sp2" }
+>>> 	{ "nx"  "N" "sp3" }
+>>> 	{ "ny"  "N" "sp3" }
+>>> 	{ "nz"  "N" "sp3" }
+>>> 	{ "n+"  "N" "sp3" }
+>>> 	{ "s"   "S" "sp2" }
+>>> 	{ "s2"   "S" "sp2" }
+>>> 	{ "s3"   "S" "sp3" }
+>>> 	{ "s4"   "S" "sp3" }
+>>> 	{ "s6"   "S" "sp3" }
+>>> 	{ "sh"   "S" "sp3" }
+>>> 	{ "sp"   "S" "sp3" }
+>>> 	{ "sq"   "S" "sp3" }
+>>> 	{ "ss"   "S" "sp3" }
+>>> 	{ "sx"   "S" "sp3" }
+>>> 	{ "sy"   "S" "sp3" }
+>>> 	{ "p2"   "P" "sp2" }
+>>> 	{ "p3"   "P" "sp3" }
+>>> 	{ "p4"   "P" "sp3" }
+>>> 	{ "p5"   "P" "sp3" }
+>>> 	{ "pb"   "P" "sp3" }
+>>> 	{ "pc"   "P" "sp3" }
+>>> 	{ "pd"   "P" "sp3" }
+>>> 	{ "pe"   "P" "sp3" }
+>>> 	{ "pf"   "P" "sp3" }
+>>> 	{ "px"   "P" "sp3" }
+>>> 	{ "py"   "P" "sp3" }
+>>> 	{ "f"   "F" "sp3" }
+>>> 	{ "cl"  "Cl" "sp3" }
+>>> 	{ "br"  "Br" "sp3" }
+>>> 	{ "i"   "I"  "sp3" }
+>>> }
+>>> #
+>>> #	Load the general force field parameter set.
+>>> #
+>>> gaff = loadamberparams gaff2.dat
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)
+(UNKNOWN ATOM TYPE: hb)
+>> 
+>> # Load parameters not explicitly found in gaff2
+>> # but required by LignAmb25
+>> lnAMbp = loadamberparams LignAmb25_HF.dat
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/LignAmb25_HF.dat
+Reading title:
+LignAmb25 force field for lignin polymers (Version 1.0.0 September 2025)
+>> #
+>> # Load LignAmb25 residue library
+>> #
+>> lnAMbl = loadoff LignAmb25_HF.lib
+Loading library: /data/srinivab/lignin_construction/ambertools26/dat/leap/lib/LignAmb25_HF.lib
+Loading: 1C1
+Loading: 1D1
+Loading: 1G1
+Loading: 1G4
+Loading: 1H1
+Loading: 1H4
+Loading: 1S1
+Loading: 1S4
+Loading: 1T4
+Loading: 1TL
+Loading: 1TM
+Loading: 1g1
+Loading: 2C2
+Loading: 2C4
+Loading: 2C5
+Loading: 2CF
+Loading: 2D3
+Loading: 2G2
+Loading: 2G4
+Loading: 2G5
+Loading: 2GF
+Loading: 2Gf
+Loading: 2H2
+Loading: 2H4
+Loading: 2H5
+Loading: 2HF
+Loading: 2S2
+Loading: 2S4
+Loading: 2TL
+Loading: 2TM
+Loading: 2TN
+Loading: 2g2
+Loading: 2g4
+Loading: 3CK
+Loading: 3CV
+Loading: 3CX
+Loading: 3Cx
+Loading: 3DJ
+Loading: 3GK
+Loading: 3GV
+Loading: 3Gx
+Loading: 3HK
+Loading: 3HV
+Loading: 3Ho
+Loading: 3Hq
+Loading: 3Hx
+Loading: 3Sx
+Loading: 3TN
+Loading: 3gJ
+Loading: 3gx
+Loading: 4Cw
+Loading: 4Gy
+Loading: 4Gz
+Loading: 4Hr
+Loading: 4Hs
+Loading: 4Ht
+Loading: 4Hu
+Loading: 4Hy
+Loading: 4Hz
+Loading: 4gw
+Loading: 5Cl
+Loading: 5Cm
+Loading: 5Hi
+Loading: 5Hj
+Loading: 5Hk
+Loading: A4E
+Loading: A4T
+Loading: A4e
+Loading: A4t
+Loading: ABE
+Loading: ABT
+Loading: ABe
+Loading: ABt
+Loading: AZE
+Loading: AZT
+Loading: AZe
+Loading: AZt
+Loading: AcC
+Loading: AcT
+Loading: AgT
+Loading: ApT
+Loading: B1E
+Loading: B1T
+Loading: B1e
+Loading: B1t
+Loading: B4E
+Loading: B4T
+Loading: B4e
+Loading: B4t
+Loading: B5E
+Loading: B5T
+Loading: B5e
+Loading: B5t
+Loading: BAR
+Loading: BAS
+Loading: BB0
+Loading: BB1
+Loading: BB2
+Loading: BB3
+Loading: BB4
+Loading: BB5
+Loading: BB6
+Loading: BB7
+Loading: BB8
+Loading: BB9
+Loading: BBA
+Loading: BBB
+Loading: BBC
+Loading: BBD
+Loading: BBE
+Loading: BBF
+Loading: BDE
+Loading: BDT
+Loading: BDe
+Loading: BDt
+Loading: CAT
+Loading: COT
+Loading: CXX
+Loading: CaT
+Loading: CoT
+Loading: Csp
+Loading: DBE
+Loading: DBT
+Loading: DBe
+Loading: DBt
+Loading: DhT
+Loading: Fer
+Loading: GCE
+Loading: GCT
+Loading: GCe
+Loading: GCt
+Loading: GXX
+Loading: GZE
+Loading: GZT
+Loading: GZe
+Loading: GZt
+Loading: Gsp
+Loading: HXX
+Loading: Hsp
+Loading: MoT
+Loading: PrT
+Loading: STI
+Loading: SXX
+Loading: Ssp
+Loading: XCE
+Loading: XCT
+Loading: XCe
+Loading: XCt
+Loading: cDF
+Loading: dAR
+Loading: dAS
+Loading: lDF
+Loading: tlT
+>> #
+>> #
+>> # Load LignAmb25 residue library
+>> #
+>> lnAMBc = loadamberparams LignAmb25_HF-GLYCAM.frcmod
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/LignAmb25_HF-GLYCAM.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Combined Lignin-Carbohydrate Cross-linkage Parameters (LignAmb25/GLYCAM)
+>> #
+> 
+> 
+> ## AO4 lignin chain for G/S/H = 2.02:0.19:0.38
+> t1 = copy tlT
+> set t1 tail t1.1.CAD
+> t2 = copy 2G4
+> set t2 head t2.1.C1
+> set t2 tail t2.1.O4E
+> test_all_40_02_ao4 = sequence { t1 t2 }
+Sequence: tlT
+Sequence: 2G4
+> b1 = copy A4t
+> set b1 head b1.1.CAO
+> set b1 tail b1.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b1 }
+Sequence: tlT
+Sequence: A4t
+> t3 = copy 2G4
+> set t3 head t3.1.C1
+> set t3 tail t3.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t3 }
+Sequence: tlT
+Sequence: 2G4
+> b2 = copy A4t
+> set b2 head b2.1.CAO
+> set b2 tail b2.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b2 }
+Sequence: tlT
+Sequence: A4t
+> t4 = copy 2G4
+> set t4 head t4.1.C1
+> set t4 tail t4.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t4 }
+Sequence: tlT
+Sequence: 2G4
+> b3 = copy A4t
+> set b3 head b3.1.CAO
+> set b3 tail b3.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b3 }
+Sequence: tlT
+Sequence: A4t
+> t5 = copy 2G4
+> set t5 head t5.1.C1
+> set t5 tail t5.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t5 }
+Sequence: tlT
+Sequence: 2G4
+> b4 = copy A4t
+> set b4 head b4.1.CAO
+> set b4 tail b4.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b4 }
+Sequence: tlT
+Sequence: A4t
+> t6 = copy 2S4
+> set t6 head t6.1.C1
+> set t6 tail t6.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t6 }
+Sequence: tlT
+Sequence: 2S4
+> b5 = copy A4t
+> set b5 head b5.1.CAO
+> set b5 tail b5.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b5 }
+Sequence: tlT
+Sequence: A4t
+> t7 = copy 2G4
+> set t7 head t7.1.C1
+> set t7 tail t7.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t7 }
+Sequence: tlT
+Sequence: 2G4
+> b6 = copy A4t
+> set b6 head b6.1.CAO
+> set b6 tail b6.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b6 }
+Sequence: tlT
+Sequence: A4t
+> t8 = copy 2G4
+> set t8 head t8.1.C1
+> set t8 tail t8.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t8 }
+Sequence: tlT
+Sequence: 2G4
+> b7 = copy A4t
+> set b7 head b7.1.CAO
+> set b7 tail b7.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b7 }
+Sequence: tlT
+Sequence: A4t
+> t9 = copy 2G4
+> set t9 head t9.1.C1
+> set t9 tail t9.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t9 }
+Sequence: tlT
+Sequence: 2G4
+> b8 = copy A4t
+> set b8 head b8.1.CAO
+> set b8 tail b8.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b8 }
+Sequence: tlT
+Sequence: A4t
+> t10 = copy 2S4
+> set t10 head t10.1.C1
+> set t10 tail t10.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t10 }
+Sequence: tlT
+Sequence: 2S4
+> b9 = copy A4t
+> set b9 head b9.1.CAO
+> set b9 tail b9.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b9 }
+Sequence: tlT
+Sequence: A4t
+> t11 = copy 2G4
+> set t11 head t11.1.C1
+> set t11 tail t11.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t11 }
+Sequence: tlT
+Sequence: 2G4
+> b10 = copy A4t
+> set b10 head b10.1.CAO
+> set b10 tail b10.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b10 }
+Sequence: tlT
+Sequence: A4t
+> t12 = copy 2G4
+> set t12 head t12.1.C1
+> set t12 tail t12.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t12 }
+Sequence: tlT
+Sequence: 2G4
+> b11 = copy A4t
+> set b11 head b11.1.CAO
+> set b11 tail b11.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b11 }
+Sequence: tlT
+Sequence: A4t
+> t13 = copy 2G4
+> set t13 head t13.1.C1
+> set t13 tail t13.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t13 }
+Sequence: tlT
+Sequence: 2G4
+> b12 = copy A4t
+> set b12 head b12.1.CAO
+> set b12 tail b12.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b12 }
+Sequence: tlT
+Sequence: A4t
+> t14 = copy 2G4
+> set t14 head t14.1.C1
+> set t14 tail t14.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t14 }
+Sequence: tlT
+Sequence: 2G4
+> b13 = copy A4t
+> set b13 head b13.1.CAO
+> set b13 tail b13.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b13 }
+Sequence: tlT
+Sequence: A4t
+> t15 = copy 2G4
+> set t15 head t15.1.C1
+> set t15 tail t15.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t15 }
+Sequence: tlT
+Sequence: 2G4
+> b14 = copy A4t
+> set b14 head b14.1.CAO
+> set b14 tail b14.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b14 }
+Sequence: tlT
+Sequence: A4t
+> t16 = copy 2G4
+> set t16 head t16.1.C1
+> set t16 tail t16.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t16 }
+Sequence: tlT
+Sequence: 2G4
+> b15 = copy A4t
+> set b15 head b15.1.CAO
+> set b15 tail b15.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b15 }
+Sequence: tlT
+Sequence: A4t
+> t17 = copy 2H4
+> set t17 head t17.1.C1
+> set t17 tail t17.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t17 }
+Sequence: tlT
+Sequence: 2H4
+> b16 = copy A4t
+> set b16 head b16.1.CAO
+> set b16 tail b16.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b16 }
+Sequence: tlT
+Sequence: A4t
+> t18 = copy 2G4
+> set t18 head t18.1.C1
+> set t18 tail t18.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t18 }
+Sequence: tlT
+Sequence: 2G4
+> b17 = copy A4t
+> set b17 head b17.1.CAO
+> set b17 tail b17.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b17 }
+Sequence: tlT
+Sequence: A4t
+> t19 = copy 2G4
+> set t19 head t19.1.C1
+> set t19 tail t19.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t19 }
+Sequence: tlT
+Sequence: 2G4
+> b18 = copy A4t
+> set b18 head b18.1.CAO
+> set b18 tail b18.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b18 }
+Sequence: tlT
+Sequence: A4t
+> t20 = copy 2G4
+> set t20 head t20.1.C1
+> set t20 tail t20.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t20 }
+Sequence: tlT
+Sequence: 2G4
+> b19 = copy A4t
+> set b19 head b19.1.CAO
+> set b19 tail b19.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b19 }
+Sequence: tlT
+Sequence: A4t
+> t21 = copy 2H4
+> set t21 head t21.1.C1
+> set t21 tail t21.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t21 }
+Sequence: tlT
+Sequence: 2H4
+> b20 = copy A4t
+> set b20 head b20.1.CAO
+> set b20 tail b20.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b20 }
+Sequence: tlT
+Sequence: A4t
+> t22 = copy 2G4
+> set t22 head t22.1.C1
+> set t22 tail t22.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t22 }
+Sequence: tlT
+Sequence: 2G4
+> b21 = copy A4t
+> set b21 head b21.1.CAO
+> set b21 tail b21.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b21 }
+Sequence: tlT
+Sequence: A4t
+> t23 = copy 2H4
+> set t23 head t23.1.C1
+> set t23 tail t23.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t23 }
+Sequence: tlT
+Sequence: 2H4
+> b22 = copy A4t
+> set b22 head b22.1.CAO
+> set b22 tail b22.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b22 }
+Sequence: tlT
+Sequence: A4t
+> t24 = copy 2S4
+> set t24 head t24.1.C1
+> set t24 tail t24.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t24 }
+Sequence: tlT
+Sequence: 2S4
+> b23 = copy A4t
+> set b23 head b23.1.CAO
+> set b23 tail b23.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b23 }
+Sequence: tlT
+Sequence: A4t
+> t25 = copy 2H4
+> set t25 head t25.1.C1
+> set t25 tail t25.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t25 }
+Sequence: tlT
+Sequence: 2H4
+> b24 = copy A4t
+> set b24 head b24.1.CAO
+> set b24 tail b24.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b24 }
+Sequence: tlT
+Sequence: A4t
+> t26 = copy 2G4
+> set t26 head t26.1.C1
+> set t26 tail t26.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t26 }
+Sequence: tlT
+Sequence: 2G4
+> b25 = copy A4t
+> set b25 head b25.1.CAO
+> set b25 tail b25.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b25 }
+Sequence: tlT
+Sequence: A4t
+> t27 = copy 2G4
+> set t27 head t27.1.C1
+> set t27 tail t27.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t27 }
+Sequence: tlT
+Sequence: 2G4
+> b26 = copy A4t
+> set b26 head b26.1.CAO
+> set b26 tail b26.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b26 }
+Sequence: tlT
+Sequence: A4t
+> t28 = copy 2H4
+> set t28 head t28.1.C1
+> set t28 tail t28.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t28 }
+Sequence: tlT
+Sequence: 2H4
+> b27 = copy A4t
+> set b27 head b27.1.CAO
+> set b27 tail b27.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b27 }
+Sequence: tlT
+Sequence: A4t
+> t29 = copy 2G4
+> set t29 head t29.1.C1
+> set t29 tail t29.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t29 }
+Sequence: tlT
+Sequence: 2G4
+> b28 = copy A4t
+> set b28 head b28.1.CAO
+> set b28 tail b28.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b28 }
+Sequence: tlT
+Sequence: A4t
+> t30 = copy 2G4
+> set t30 head t30.1.C1
+> set t30 tail t30.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t30 }
+Sequence: tlT
+Sequence: 2G4
+> b29 = copy A4t
+> set b29 head b29.1.CAO
+> set b29 tail b29.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b29 }
+Sequence: tlT
+Sequence: A4t
+> t31 = copy 2G4
+> set t31 head t31.1.C1
+> set t31 tail t31.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t31 }
+Sequence: tlT
+Sequence: 2G4
+> b30 = copy A4t
+> set b30 head b30.1.CAO
+> set b30 tail b30.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b30 }
+Sequence: tlT
+Sequence: A4t
+> t32 = copy 2G4
+> set t32 head t32.1.C1
+> set t32 tail t32.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t32 }
+Sequence: tlT
+Sequence: 2G4
+> b31 = copy A4t
+> set b31 head b31.1.CAO
+> set b31 tail b31.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b31 }
+Sequence: tlT
+Sequence: A4t
+> t33 = copy 2H4
+> set t33 head t33.1.C1
+> set t33 tail t33.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t33 }
+Sequence: tlT
+Sequence: 2H4
+> b32 = copy A4t
+> set b32 head b32.1.CAO
+> set b32 tail b32.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b32 }
+Sequence: tlT
+Sequence: A4t
+> t34 = copy 2G4
+> set t34 head t34.1.C1
+> set t34 tail t34.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t34 }
+Sequence: tlT
+Sequence: 2G4
+> b33 = copy A4t
+> set b33 head b33.1.CAO
+> set b33 tail b33.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b33 }
+Sequence: tlT
+Sequence: A4t
+> t35 = copy 2G4
+> set t35 head t35.1.C1
+> set t35 tail t35.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t35 }
+Sequence: tlT
+Sequence: 2G4
+> b34 = copy A4t
+> set b34 head b34.1.CAO
+> set b34 tail b34.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b34 }
+Sequence: tlT
+Sequence: A4t
+> t36 = copy 2G4
+> set t36 head t36.1.C1
+> set t36 tail t36.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t36 }
+Sequence: tlT
+Sequence: 2G4
+> b35 = copy A4t
+> set b35 head b35.1.CAO
+> set b35 tail b35.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b35 }
+Sequence: tlT
+Sequence: A4t
+> t37 = copy 2G4
+> set t37 head t37.1.C1
+> set t37 tail t37.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t37 }
+Sequence: tlT
+Sequence: 2G4
+> b36 = copy A4t
+> set b36 head b36.1.CAO
+> set b36 tail b36.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b36 }
+Sequence: tlT
+Sequence: A4t
+> t38 = copy 2G4
+> set t38 head t38.1.C1
+> set t38 tail t38.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t38 }
+Sequence: tlT
+Sequence: 2G4
+> b37 = copy A4t
+> set b37 head b37.1.CAO
+> set b37 tail b37.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b37 }
+Sequence: tlT
+Sequence: A4t
+> t39 = copy 2G4
+> set t39 head t39.1.C1
+> set t39 tail t39.1.O4E
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t39 }
+Sequence: tlT
+Sequence: 2G4
+> b38 = copy A4t
+> set b38 head b38.1.CAO
+> set b38 tail b38.1.CAO
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 b38 }
+Sequence: tlT
+Sequence: A4t
+> t40 = copy 1G1
+> set t40 head t40.1.C1
+> test_all_40_02_ao4 = sequence { test_all_40_02_ao4 t40 }
+Sequence: tlT
+Sequence: 1G1
+> 
+> charge test_all_40_02_ao4
+Total unperturbed charge:   0.000017
+Total perturbed charge:     0.000017
+> saveamberparm test_all_40_02_ao4 test_all_40_02_ao4.parm7 test_all_40_02_ao4.rst7
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 236 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	1G1	1
+	2G4	29
+	2H4	6
+	2S4	3
+	A4t	38
+	tlT	1
+  )
+ (no restraints)
+> savepdb test_all_40_02_ao4 test_all_40_02_ao4.pdb
+Writing pdb file: test_all_40_02_ao4.pdb
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.

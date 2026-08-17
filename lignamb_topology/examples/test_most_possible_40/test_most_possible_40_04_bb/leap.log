@@ -1,0 +1,967 @@
+log started: Mon Aug  3 16:21:01 2026
+
+Log file: ./leap.log
+>>> #
+>>> # ----- leaprc for loading the general Amber Force field.
+>>> #       This file is mostly for use with Antechamber
+>>> #
+>>> #	load atom type hybridizations
+>>> #
+>>> addAtomTypes {
+>>> 	{ "h1"  "H" "sp3" }
+>>> 	{ "h2"  "H" "sp3" }
+>>> 	{ "h3"  "H" "sp3" }
+>>> 	{ "h4"  "H" "sp3" }
+>>> 	{ "h5"  "H" "sp3" }
+>>> 	{ "ha"  "H" "sp3" }
+>>> 	{ "hc"  "H" "sp3" }
+>>> 	{ "hn"  "H" "sp3" }
+>>> 	{ "ho"  "H" "sp3" }
+>>> 	{ "hp"  "H" "sp3" }
+>>> 	{ "hs"  "H" "sp3" }
+>>> 	{ "hw"  "H" "sp3" }
+>>> 	{ "hx"  "H" "sp3" }
+>>> 	{ "o"  "O" "sp2" }
+>>> 	{ "o2"  "O" "sp2" }
+>>> 	{ "oh"  "O" "sp3" }
+>>> 	{ "op"  "O" "sp3" }
+>>> 	{ "oq"  "O" "sp3" }
+>>> 	{ "os"  "O" "sp3" }
+>>> 	{ "ow"  "O" "sp3" }
+>>> 	{ "c"  "C" "sp2" }
+>>> 	{ "c1"  "C" "sp2" }
+>>> 	{ "c2"  "C" "sp2" }
+>>> 	{ "c3"  "C" "sp3" }
+>>> 	{ "c5"  "C" "sp3" }
+>>> 	{ "c6"  "C" "sp3" }
+>>> 	{ "ca"  "C" "sp2" }
+>>> 	{ "cc"  "C" "sp2" }
+>>> 	{ "cd"  "C" "sp2" }
+>>> 	{ "ce"  "C" "sp2" }
+>>> 	{ "cf"  "C" "sp2" }
+>>> 	{ "cg"  "C" "sp2" }
+>>> 	{ "ch"  "C" "sp2" }
+>>> 	{ "cp"  "C" "sp2" }
+>>> 	{ "cs"  "C" "sp2" }
+>>> 	{ "cq"  "C" "sp2" }
+>>> 	{ "cu"  "C" "sp2" }
+>>> 	{ "cv"  "C" "sp2" }
+>>> 	{ "cx"  "C" "sp3" }
+>>> 	{ "cy"  "C" "sp3" }
+>>> 	{ "cz"  "C" "sp2" }
+>>> 	{ "n"   "N" "sp2" }
+>>> 	{ "n1"  "N" "sp2" }
+>>> 	{ "n2"  "N" "sp2" }
+>>> 	{ "n3"  "N" "sp3" }
+>>> 	{ "n4"  "N" "sp3" }
+>>> 	{ "n5"  "N" "sp3" }
+>>> 	{ "n6"  "N" "sp3" }
+>>> 	{ "n7"  "N" "sp3" }
+>>> 	{ "n8"  "N" "sp3" }
+>>> 	{ "n9"  "N" "sp3" }
+>>> 	{ "na"  "N" "sp2" }
+>>> 	{ "nb"  "N" "sp2" }
+>>> 	{ "nc"  "N" "sp2" }
+>>> 	{ "nd"  "N" "sp2" }
+>>> 	{ "ne"  "N" "sp2" }
+>>> 	{ "nf"  "N" "sp2" }
+>>> 	{ "nh"  "N" "sp2" }
+>>> 	{ "ni"  "N" "sp2" }
+>>> 	{ "nj"  "N" "sp2" }
+>>> 	{ "nk"  "N" "sp3" }
+>>> 	{ "nl"  "N" "sp3" }
+>>> 	{ "nm"  "N" "sp2" }
+>>> 	{ "nn"  "N" "sp2" }
+>>> 	{ "no"  "N" "sp2" }
+>>> 	{ "np"  "N" "sp3" }
+>>> 	{ "nq"  "N" "sp3" }
+>>> 	{ "ns"  "N" "sp2" }
+>>> 	{ "nt"  "N" "sp2" }
+>>> 	{ "nu"  "N" "sp2" }
+>>> 	{ "nv"  "N" "sp2" }
+>>> 	{ "nx"  "N" "sp3" }
+>>> 	{ "ny"  "N" "sp3" }
+>>> 	{ "nz"  "N" "sp3" }
+>>> 	{ "n+"  "N" "sp3" }
+>>> 	{ "s"   "S" "sp2" }
+>>> 	{ "s2"   "S" "sp2" }
+>>> 	{ "s3"   "S" "sp3" }
+>>> 	{ "s4"   "S" "sp3" }
+>>> 	{ "s6"   "S" "sp3" }
+>>> 	{ "sh"   "S" "sp3" }
+>>> 	{ "sp"   "S" "sp3" }
+>>> 	{ "sq"   "S" "sp3" }
+>>> 	{ "ss"   "S" "sp3" }
+>>> 	{ "sx"   "S" "sp3" }
+>>> 	{ "sy"   "S" "sp3" }
+>>> 	{ "p2"   "P" "sp2" }
+>>> 	{ "p3"   "P" "sp3" }
+>>> 	{ "p4"   "P" "sp3" }
+>>> 	{ "p5"   "P" "sp3" }
+>>> 	{ "pb"   "P" "sp3" }
+>>> 	{ "pc"   "P" "sp3" }
+>>> 	{ "pd"   "P" "sp3" }
+>>> 	{ "pe"   "P" "sp3" }
+>>> 	{ "pf"   "P" "sp3" }
+>>> 	{ "px"   "P" "sp3" }
+>>> 	{ "py"   "P" "sp3" }
+>>> 	{ "f"   "F" "sp3" }
+>>> 	{ "cl"  "Cl" "sp3" }
+>>> 	{ "br"  "Br" "sp3" }
+>>> 	{ "i"   "I"  "sp3" }
+>>> }
+>>> #
+>>> #	Load the general force field parameter set.
+>>> #
+>>> gaff = loadamberparams gaff2.dat
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.30, Oct 2025)
+(UNKNOWN ATOM TYPE: hb)
+>> 
+>> # Load parameters not explicitly found in gaff2
+>> # but required by LignAmb25
+>> lnAMbp = loadamberparams LignAmb25_HF.dat
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/LignAmb25_HF.dat
+Reading title:
+LignAmb25 force field for lignin polymers (Version 1.0.0 September 2025)
+>> #
+>> # Load LignAmb25 residue library
+>> #
+>> lnAMbl = loadoff LignAmb25_HF.lib
+Loading library: /data/srinivab/lignin_construction/ambertools26/dat/leap/lib/LignAmb25_HF.lib
+Loading: 1C1
+Loading: 1D1
+Loading: 1G1
+Loading: 1G4
+Loading: 1H1
+Loading: 1H4
+Loading: 1S1
+Loading: 1S4
+Loading: 1T4
+Loading: 1TL
+Loading: 1TM
+Loading: 1g1
+Loading: 2C2
+Loading: 2C4
+Loading: 2C5
+Loading: 2CF
+Loading: 2D3
+Loading: 2G2
+Loading: 2G4
+Loading: 2G5
+Loading: 2GF
+Loading: 2Gf
+Loading: 2H2
+Loading: 2H4
+Loading: 2H5
+Loading: 2HF
+Loading: 2S2
+Loading: 2S4
+Loading: 2TL
+Loading: 2TM
+Loading: 2TN
+Loading: 2g2
+Loading: 2g4
+Loading: 3CK
+Loading: 3CV
+Loading: 3CX
+Loading: 3Cx
+Loading: 3DJ
+Loading: 3GK
+Loading: 3GV
+Loading: 3Gx
+Loading: 3HK
+Loading: 3HV
+Loading: 3Ho
+Loading: 3Hq
+Loading: 3Hx
+Loading: 3Sx
+Loading: 3TN
+Loading: 3gJ
+Loading: 3gx
+Loading: 4Cw
+Loading: 4Gy
+Loading: 4Gz
+Loading: 4Hr
+Loading: 4Hs
+Loading: 4Ht
+Loading: 4Hu
+Loading: 4Hy
+Loading: 4Hz
+Loading: 4gw
+Loading: 5Cl
+Loading: 5Cm
+Loading: 5Hi
+Loading: 5Hj
+Loading: 5Hk
+Loading: A4E
+Loading: A4T
+Loading: A4e
+Loading: A4t
+Loading: ABE
+Loading: ABT
+Loading: ABe
+Loading: ABt
+Loading: AZE
+Loading: AZT
+Loading: AZe
+Loading: AZt
+Loading: AcC
+Loading: AcT
+Loading: AgT
+Loading: ApT
+Loading: B1E
+Loading: B1T
+Loading: B1e
+Loading: B1t
+Loading: B4E
+Loading: B4T
+Loading: B4e
+Loading: B4t
+Loading: B5E
+Loading: B5T
+Loading: B5e
+Loading: B5t
+Loading: BAR
+Loading: BAS
+Loading: BB0
+Loading: BB1
+Loading: BB2
+Loading: BB3
+Loading: BB4
+Loading: BB5
+Loading: BB6
+Loading: BB7
+Loading: BB8
+Loading: BB9
+Loading: BBA
+Loading: BBB
+Loading: BBC
+Loading: BBD
+Loading: BBE
+Loading: BBF
+Loading: BDE
+Loading: BDT
+Loading: BDe
+Loading: BDt
+Loading: CAT
+Loading: COT
+Loading: CXX
+Loading: CaT
+Loading: CoT
+Loading: Csp
+Loading: DBE
+Loading: DBT
+Loading: DBe
+Loading: DBt
+Loading: DhT
+Loading: Fer
+Loading: GCE
+Loading: GCT
+Loading: GCe
+Loading: GCt
+Loading: GXX
+Loading: GZE
+Loading: GZT
+Loading: GZe
+Loading: GZt
+Loading: Gsp
+Loading: HXX
+Loading: Hsp
+Loading: MoT
+Loading: PrT
+Loading: STI
+Loading: SXX
+Loading: Ssp
+Loading: XCE
+Loading: XCT
+Loading: XCe
+Loading: XCt
+Loading: cDF
+Loading: dAR
+Loading: dAS
+Loading: lDF
+Loading: tlT
+>> #
+>> #
+>> # Load LignAmb25 residue library
+>> #
+>> lnAMBc = loadamberparams LignAmb25_HF-GLYCAM.frcmod
+Loading parameters: /data/srinivab/lignin_construction/ambertools26/dat/leap/parm/LignAmb25_HF-GLYCAM.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Combined Lignin-Carbohydrate Cross-linkage Parameters (LignAmb25/GLYCAM)
+>> #
+> 
+> 
+> ## BB lignin chain for G/S/H = 2.02:0.19:0.38
+> t1 = copy 1H1
+> set t1 tail t1.1.C1
+> test_most_possible_40_04_bb = sequence { t1 }
+Sequence: 1H1
+> b1 = copy BBE
+> set b1 head b1.1.CR31
+> set b1 tail b1.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b1 }
+Sequence: 1H1
+Sequence: BBE
+> t2 = copy 1G1
+> set t2 head t2.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t2 }
+Sequence: 1H1
+Sequence: 1G1
+> b2 = copy BBE
+> set b2 head b2.1.CR31
+> set b2 tail b2.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b2 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t3 = copy 1G1
+> set t3 head t3.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t3 }
+Sequence: 1H1
+Sequence: 1G1
+> b3 = copy BBE
+> set b3 head b3.1.CR31
+> set b3 tail b3.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b3 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t4 = copy 1G1
+> set t4 head t4.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t4 }
+Sequence: 1H1
+Sequence: 1G1
+> b4 = copy BBE
+> set b4 head b4.1.CR31
+> set b4 tail b4.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b4 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t5 = copy 1G1
+> set t5 head t5.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t5 }
+Sequence: 1H1
+Sequence: 1G1
+> b5 = copy BBE
+> set b5 head b5.1.CR31
+> set b5 tail b5.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b5 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t6 = copy 1G1
+> set t6 head t6.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t6 }
+Sequence: 1H1
+Sequence: 1G1
+> b6 = copy BBE
+> set b6 head b6.1.CR31
+> set b6 tail b6.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b6 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t7 = copy 1H1
+> set t7 head t7.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t7 }
+Sequence: 1H1
+Sequence: 1H1
+> b7 = copy BBE
+> set b7 head b7.1.CR31
+> set b7 tail b7.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b7 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t8 = copy 1G1
+> set t8 head t8.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t8 }
+Sequence: 1H1
+Sequence: 1G1
+> b8 = copy BBE
+> set b8 head b8.1.CR31
+> set b8 tail b8.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b8 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t9 = copy 1S1
+> set t9 head t9.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t9 }
+Sequence: 1H1
+Sequence: 1S1
+> b9 = copy BBE
+> set b9 head b9.1.CR31
+> set b9 tail b9.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b9 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t10 = copy 1G1
+> set t10 head t10.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t10 }
+Sequence: 1H1
+Sequence: 1G1
+> b10 = copy BBE
+> set b10 head b10.1.CR31
+> set b10 tail b10.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b10 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t11 = copy 1G1
+> set t11 head t11.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t11 }
+Sequence: 1H1
+Sequence: 1G1
+> b11 = copy BBE
+> set b11 head b11.1.CR31
+> set b11 tail b11.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b11 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t12 = copy 1G1
+> set t12 head t12.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t12 }
+Sequence: 1H1
+Sequence: 1G1
+> b12 = copy BBE
+> set b12 head b12.1.CR31
+> set b12 tail b12.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b12 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t13 = copy 1G1
+> set t13 head t13.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t13 }
+Sequence: 1H1
+Sequence: 1G1
+> b13 = copy BBE
+> set b13 head b13.1.CR31
+> set b13 tail b13.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b13 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t14 = copy 1S1
+> set t14 head t14.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t14 }
+Sequence: 1H1
+Sequence: 1S1
+> b14 = copy BBE
+> set b14 head b14.1.CR31
+> set b14 tail b14.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b14 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t15 = copy 1G1
+> set t15 head t15.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t15 }
+Sequence: 1H1
+Sequence: 1G1
+> b15 = copy BBE
+> set b15 head b15.1.CR31
+> set b15 tail b15.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b15 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t16 = copy 1G1
+> set t16 head t16.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t16 }
+Sequence: 1H1
+Sequence: 1G1
+> b16 = copy BBE
+> set b16 head b16.1.CR31
+> set b16 tail b16.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b16 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t17 = copy 1G1
+> set t17 head t17.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t17 }
+Sequence: 1H1
+Sequence: 1G1
+> b17 = copy BBE
+> set b17 head b17.1.CR31
+> set b17 tail b17.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b17 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t18 = copy 1G1
+> set t18 head t18.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t18 }
+Sequence: 1H1
+Sequence: 1G1
+> b18 = copy BBE
+> set b18 head b18.1.CR31
+> set b18 tail b18.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b18 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t19 = copy 1G1
+> set t19 head t19.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t19 }
+Sequence: 1H1
+Sequence: 1G1
+> b19 = copy BBE
+> set b19 head b19.1.CR31
+> set b19 tail b19.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b19 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t20 = copy 1H1
+> set t20 head t20.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t20 }
+Sequence: 1H1
+Sequence: 1H1
+> b20 = copy BBE
+> set b20 head b20.1.CR31
+> set b20 tail b20.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b20 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t21 = copy 1H1
+> set t21 head t21.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t21 }
+Sequence: 1H1
+Sequence: 1H1
+> b21 = copy BBE
+> set b21 head b21.1.CR31
+> set b21 tail b21.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b21 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t22 = copy 1G1
+> set t22 head t22.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t22 }
+Sequence: 1H1
+Sequence: 1G1
+> b22 = copy BBE
+> set b22 head b22.1.CR31
+> set b22 tail b22.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b22 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t23 = copy 1G1
+> set t23 head t23.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t23 }
+Sequence: 1H1
+Sequence: 1G1
+> b23 = copy BBE
+> set b23 head b23.1.CR31
+> set b23 tail b23.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b23 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t24 = copy 1H1
+> set t24 head t24.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t24 }
+Sequence: 1H1
+Sequence: 1H1
+> b24 = copy BBE
+> set b24 head b24.1.CR31
+> set b24 tail b24.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b24 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t25 = copy 1G1
+> set t25 head t25.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t25 }
+Sequence: 1H1
+Sequence: 1G1
+> b25 = copy BBE
+> set b25 head b25.1.CR31
+> set b25 tail b25.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b25 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t26 = copy 1G1
+> set t26 head t26.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t26 }
+Sequence: 1H1
+Sequence: 1G1
+> b26 = copy BBE
+> set b26 head b26.1.CR31
+> set b26 tail b26.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b26 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t27 = copy 1G1
+> set t27 head t27.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t27 }
+Sequence: 1H1
+Sequence: 1G1
+> b27 = copy BBE
+> set b27 head b27.1.CR31
+> set b27 tail b27.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b27 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t28 = copy 1G1
+> set t28 head t28.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t28 }
+Sequence: 1H1
+Sequence: 1G1
+> b28 = copy BBE
+> set b28 head b28.1.CR31
+> set b28 tail b28.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b28 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t29 = copy 1G1
+> set t29 head t29.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t29 }
+Sequence: 1H1
+Sequence: 1G1
+> b29 = copy BBE
+> set b29 head b29.1.CR31
+> set b29 tail b29.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b29 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t30 = copy 1G1
+> set t30 head t30.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t30 }
+Sequence: 1H1
+Sequence: 1G1
+> b30 = copy BBE
+> set b30 head b30.1.CR31
+> set b30 tail b30.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b30 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t31 = copy 1G1
+> set t31 head t31.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t31 }
+Sequence: 1H1
+Sequence: 1G1
+> b31 = copy BBE
+> set b31 head b31.1.CR31
+> set b31 tail b31.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b31 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t32 = copy 1G1
+> set t32 head t32.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t32 }
+Sequence: 1H1
+Sequence: 1G1
+> b32 = copy BBE
+> set b32 head b32.1.CR31
+> set b32 tail b32.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b32 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t33 = copy 1S1
+> set t33 head t33.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t33 }
+Sequence: 1H1
+Sequence: 1S1
+> b33 = copy BBE
+> set b33 head b33.1.CR31
+> set b33 tail b33.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b33 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t34 = copy 1G1
+> set t34 head t34.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t34 }
+Sequence: 1H1
+Sequence: 1G1
+> b34 = copy BBE
+> set b34 head b34.1.CR31
+> set b34 tail b34.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b34 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t35 = copy 1G1
+> set t35 head t35.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t35 }
+Sequence: 1H1
+Sequence: 1G1
+> b35 = copy BBE
+> set b35 head b35.1.CR31
+> set b35 tail b35.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b35 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t36 = copy 1G1
+> set t36 head t36.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t36 }
+Sequence: 1H1
+Sequence: 1G1
+> b36 = copy BBE
+> set b36 head b36.1.CR31
+> set b36 tail b36.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b36 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t37 = copy 1G1
+> set t37 head t37.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t37 }
+Sequence: 1H1
+Sequence: 1G1
+> b37 = copy BBE
+> set b37 head b37.1.CR31
+> set b37 tail b37.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b37 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t38 = copy 1G1
+> set t38 head t38.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t38 }
+Sequence: 1H1
+Sequence: 1G1
+> b38 = copy BBE
+> set b38 head b38.1.CR31
+> set b38 tail b38.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b38 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t39 = copy 1G1
+> set t39 head t39.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t39 }
+Sequence: 1H1
+Sequence: 1G1
+> b39 = copy BBE
+> set b39 head b39.1.CR31
+> set b39 tail b39.1.CR32
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb b39 }
+Sequence: 1H1
+Sequence: BBE
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+One sided connection. Residue (1H1) missing connect1 atom.
+> t40 = copy 1H1
+> set t40 head t40.1.C1
+> test_most_possible_40_04_bb = sequence { test_most_possible_40_04_bb t40 }
+Sequence: 1H1
+Sequence: 1H1
+> 
+> charge test_most_possible_40_04_bb
+Total unperturbed charge:  -0.000106
+Total perturbed charge:    -0.000106
+> saveamberparm test_most_possible_40_04_bb test_most_possible_40_04_bb.parm7 test_most_possible_40_04_bb.rst7
+Checking Unit.
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Warning!
+There is a bond of 3.105 angstroms between CR12 and CR22 atoms:
+-------  .R<BBE 2>.A<CR12 10> and .R<BBE 2>.A<CR22 13>
+
+/data/srinivab/lignin_construction/ambertools26/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2H C6H C1 CR31
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2H C6H C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2S C6S C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2S C6S C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2H C6H C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2H C6H C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2H C6H C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2S C6S C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2G C6G C1 CR32
+ ** Warning: No sp2 improper torsion term for  cH-cH-cN-Cr
+        atoms are: C2H C6H C1 CR32
+ total 200 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	1G1	31
+	1H1	6
+	1S1	3
+	BBE	39
+  )
+ (no restraints)
+> savepdb test_most_possible_40_04_bb test_most_possible_40_04_bb.pdb
+Writing pdb file: test_most_possible_40_04_bb.pdb
+> quit
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 39; Notes = 1.
